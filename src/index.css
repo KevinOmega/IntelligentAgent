@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,111 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+p{
+  margin: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+i{
+  font-size: 25px;
+}
+
+.btn-add{
+  padding: 1px !important;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.content{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding:2rem ;
+  gap: 3rem;
+}
+
+
+.problem-container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-items: space-between;
+  gap: 2rem;
+}
+
+.graphic{
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.graphic-container{
+  width: 45%;
+}
+
+.table-text{
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.table-row{
+  align-items: center;
+  border: 1px solid black;
+  border-top: transparent;
+  display: flex;
+  align-items: center;
+}
+.table-container{
+  width: 40%;
+}
+
+.table-row:first-child{
+  border-top: 1px solid black;
+}
+
+.btns{
+  display: flex;
+  gap: 1rem;
+}
+
+.input-item{
+  display: flex;
+  gap: 2px
+}
+
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  text-align: center;
+  gap: 0.3rem
+
+}
+
+.chip p{
+  margin: 0;
 }

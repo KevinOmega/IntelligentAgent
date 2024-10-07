@@ -5,6 +5,7 @@ const Heuristic = ({results}) => {
   return (
     <div className="blind">
         <h1>Búsqueda Heuristica resultados</h1>
+        <h4 className="text-secondary">Heuristica: Distancia a una casa restante</h4>
         <div className="retults">
             <div className="tree-container">
                 <h4>Arbol de expansion</h4>

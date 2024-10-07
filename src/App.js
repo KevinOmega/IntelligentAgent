@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 import { FaMinus } from "react-icons/fa";
 import Blind from "./components/Blind";
-import { BFSsearch } from "./searches";
+import Heuristic from "./components/Heuristic";
+import { BFSsearch, heuristicSearch_A } from "./searches";
 
 
 
@@ -37,6 +38,12 @@ function App() {
     setPerformBlindSearch(true);
     setPerformHeuristicSearch(false);
     setResults(BFSsearch(housesList));
+  };
+
+  const handleHeuristicSearch = () => {
+    setPerformHeuristicSearch(true);
+    setPerformBlindSearch(false);
+    setResults(heuristicSearch_A(housesList));
   };
 
   return (
@@ -88,10 +95,11 @@ function App() {
             </div>
             <div className="btns">
                 <button className="btn btn-primary" onClick={handleBlindSearch}>Generar Búsqueda Ciega</button>
-                <button className="btn btn-dark"> Generar Búsqueda Heurística</button>
+                <button className="btn btn-dark" onClick={handleHeuristicSearch}> Generar Búsqueda Heurística</button>
             </div>
 
             {performBlindSearch && <Blind results={results} />}
+            {performHeuristicSearch && <Heuristic results={results} />}
         </div>
     </div>
   );

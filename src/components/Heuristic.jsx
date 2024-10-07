@@ -1,23 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graph } from '../data'
 
-const Blind = ({results}) => {
-
+const Heuristic = ({results}) => {
   return (
     <div className="blind">
-        <h1>Búsqueda Ciega resultados</h1>
+        <h1>Búsqueda Heuristica resultados</h1>
         <div className="retults">
             <div className="tree-container">
                 <h4>Arbol de expansion</h4>
                     <div className="tree">
-                    {Object.keys(results.tree2).map((key) => (
+                    {Object.keys(results.tree).map((key) => (
                         <div className="row " key={key}>
                             <div className="col-auto">
                                 <p className='fw-bold' key={key}>{ key }:</p>
                             </div>
                             <div className="tree-row col-10">
                             {
-                            Object.keys(results.tree2[key]).map((key2) => (
+                            Object.keys(results.tree[key]).map((key2) => (
                                 <div className="col-auto" key={key2}>
                                     <div className="tree-item bg-primary text-light">
                                         <p className='fw-bold span'>{results.tree[key][key2]}: {graph[key2][results.tree[key][key2]]}</p>
@@ -71,5 +70,4 @@ const Blind = ({results}) => {
   )
 }
 
-
-export default Blind
+export default Heuristic
